@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+
+                       <!-- Bootstrap 3 here  -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+
+    <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
+  
+ 
+    <style>
+        
+      html{
+        scroll-behavior: smooth;
+      }
+    
+     
+      /* change navbar background on collapse */
+      @media (max-width: 768px) {
+          /* nav.navbar is for full navbar background change */
+            nav.navbar {                         
+              background: rgba(0, 0, 0, 0.315);
+              }
+            .fa-bars{
+                  color: white;
+                  font-size: 30px;
+            }
+            #yellowblock_image1{
+               max-width: 100%;margin-left: -10%;margin-top: -40%;
+               height: 450px;
+               
+            }
+            #yellowblock_image2{
+               max-width: 100%;
+            }
+
+           .container-fluid{
+                 background-color:#07051c;
+                  
+                padding-top: 20%;
+           }
+           
+          
+      }
+
+      .nav-link{
+                font-size: 22px;
+      }
+      .nav-item{
+                padding-left: 20px;
+      }
+      .overlay{
+              position: relative;
+      }
+      .overlay::after {
+          position: absolute;
+          content: "";
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: black;
+          opacity: 0.3;
+      }
+      #heading_link{
+        text-decoration-line:none;
+
+      }
+     
+      #main_heading:hover{
+           
+                opacity: 0.4;
+                
+      }
+      #heading_circle{
+              width: 120px; height: 120px;
+              border: 2px solid; border-color: rgba(128, 128, 128, 0.288);
+              margin-bottom:0%; margin-left: 30%;margin-top: -15%;
+             
+      }
+       #heading_circle:hover{
+             
+              border: 2px solid; border-color: rgb(191, 255, 71); 
+                   
+      }
+      
+      #open_in_circle:hover {
+              opacity: 0.5;
+              
+      }
+
+      #open_link{
+                  text-decoration-line: none;
+                  color: white;
+      }
+      #collapsibleNavbar{
+      
+        background-color: transparent;
+      }
+      .learn{
+        background-color:transparent
+      }
+      .learn:hover{
+            /* background-color:lightgrey */
+            opacity: 0.5;
+            
+      }
+      .carousel-control-prev{
+            top: 50%;bottom: 40%; right: -20%; left: -5%;
+      }
+      .carousel-control-next{
+            top: 45%; bottom: 40%;
+      }
+      /* #largebox{
+            width: 390px; height: 250px;
+            border:10px solid;  border-color:rgb(91, 9, 243);
+            margin-top: 0%; margin-bottom: -10%; margin-left: 75%;
+          
+      }
+      #newbox1{
+             width: 150px; height: 330px;
+            border:10px solid;  border-color:yellow;
+            margin-left:80%;  margin-top: -15%;  margin-bottom: -20%;
+      } */
+        #newbox2{
+                  width: 390px; height: 520px;
+                  border: 5px solid; border-color: aqua;
+                  margin-left: 14%; margin-top: 20%; margin-bottom: -20%;
+        }
+        
+
+      li a{
+            margin-left: 20px;
+
+      }
+
+      li a:hover{
+                  /* background-color:lightgrey; */
+                  opacity: 0.4;
+                 
+                  
+      }
+      /* #about{
+                width: 100%; height: 1300px;
+                background-color:#07051c;
+                padding-top: 350px;
+               
+      } */
+      .container-fluid{
+                 background-color:#07051c;
+                /* padding-top: 320px; */
+                margin-top: 0%;
+      }
+      #yellow_block{
+
+                  width: 1250px; height: 200px;
+                  border: 15px solid;
+                  border-color: #f7c80c;
+                  margin-left: 2%;margin-bottom: 15%; margin-top: 25%; margin-bottom: -25%;
+                   
+      }
+     
+     
+      #contact{
+                width: 100%; height: 1500px;
+                background-color:gray
+      }
+      #circle{
+                width: 300px; 
+                height: 300px;
+                border:30px solid;
+                 border-color: yellow;
+                background-color: wheat;
+      }
+     
+      #s1_circle{
+                  width: 200px;height: 200px;
+                  border:13px solid;
+                  border-color: rebeccapurple;
+                  background-color: rgba(0, 255, 76, 0.425);
+      }
+      #s2_circle{
+                  width: 100px;height: 100px;
+                  border:14px solid;
+                  border-color: navy;
+      }
+      #s3_circle{
+                  width: 380px; height: 380px;
+                  border:25px solid;
+                  border-color: rgb(238, 174, 170);
+      }
+      #square1{
+                width: 200px;
+                height: 200px;
+                border: 10px solid; border-color: mediumorchid;
+                background-color: rgba(0, 250, 154, 0.192);
+      }
+      #square2{
+                width: 170px;
+                height: 170px;
+                border: 20px solid; border-color: rgb(187, 134, 36);
+      }
+     
+      /* #about_new.container-fluid{
+               background-color:#07051c;
+                padding-top: 320px;
+                margin-top: 0%;
+               
+      }
+      #yellow_block_new{
+                   width: 1250px; height: 200px;
+                  border: 15px solid;
+                  border-color: #f7c80c;
+                  margin-left: 4%;margin-bottom: 15%; margin-top: -30%;
+      }
+          */
+     
+       .cool-link::after {
+          content: '';
+          display: block;
+          width: 0;
+          height: 2px;
+          background: rgb(255, 250, 250);
+          transition: width .3s;
+      }
+
+        .cool-link:hover::after {
+            width: 100%;
+           
+            /* transition: width .3s; */
+        }
+    
+    </style>        
+</head>
+
+<body>
+  
+   <nav  class="navbar navbar-expand-md navbar-light fixed-top "  >  
+                                                                          <!-- Navbar-light turns the backgroud Transparent-->
+        <a style="color: aliceblue; font-size: 40px;"  class="navbar-brand cool-link" href="#">Al FANNAN</a>
+        
+        <button style="border: none;" class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span ><i class="fa fa-bars" aria-hidden="true"></i> </span>
+          </button>
+
+                        <!-- This is the previous one -->
+
+          <div  class="collapse navbar-collapse" id= "collapsibleNavbar" >
+             <ul  class="navbar-nav">
+              <li class="nav-item">
+                <a  style=" color: azure; transition-duration: 0.3s; " class="nav-link cool-link" href="#about">ABOUT </a>
+              </li>
+              <li class="nav-item">
+                <a style="color: azure; transition-duration: 0.3s;" class="nav-link cool-link" href="#contact">CONTACT</a>
+              </li>
+              <li class="nav-item">
+                <a style="color: azure;transition-duration: 0.3s; "   class="nav-link cool-link" href="project.html">PROJECT</a>
+              </li>    
+            </ul>
+          </div>
+     </nav>   
+
+
+    
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+      <div id="page_head" class="carousel-inner flex">
+        <div class="carousel-item active ">
+              <div id="image1" class="overlay">
+                  <img src="images/black int.jpg" class=" d-block w-100  d-md-block" alt="..." width="500" height="655">
+              </div>
+           
+           <div class="carousel-caption" id="caption_contain">
+              
+           
+
+                <div id="newbox2" >
+                
+                <a id="heading_link" href="project1.html" >
+                <h1 id="main_heading" style="font-size: 45px; margin-bottom: 5%; margin-right: 10%;margin-top: 5%; color:white; font-family: sofia; transition: 0.3s;" class="h3-responsive">  Lounge Interior </h1></a>
+                     <!-- font-size:1vw; -->
+                  <h6 style="margin-right: 20%; margin-bottom: 20%;margin-left: 10%; font-family:sans-serif; "> we make indoor spaces functional , safe , and <br>  beautiful  by determining space requirements <br> and selecting essential  and  decorative items,<br> such as colors, lighting, and materials.</h6>
+
+                  <div id="heading_circle" class="rounded-circle" style="transition: 0.7s;"> 
+                    <a id="open_link" href="project1.html"><h6 id="open_in_circle" style="margin-top: 40%;font-size: 25px; transition: 0.3s;font-family: Verdana;">OPEN </h6> </a>
+                  </div>
+                </div>
+
+                 <button style=" font-size: x-large; border:1px solid; padding-left: 20px; padding-right: 20px; margin-left: 40%; margin-right: 10%; transition: 0.4s;" type="button" class="learn"> Learn More</button>
+                
+
+            </div>
+         </div>
+      
+     
+            <!-- <div class="carousel-item">
+                <div class="overlay">
+                  <img src="images/interior2nd.jpg" class="d-block w-100" alt="..." width="500" height="650">
+                </div>
+                <div class="carousel-caption">
+                  <h1 style="font-size: 90px; margin-bottom: 20%; margin-right: 50%;" class="h1-responsive">Light mask</h1>
+                  <p>First text</p>
+                </div>
+            </div> -->
+
+            <!-- <div class="carousel-item">
+                    <div>
+                      <img src="images/interior.jpg" class="d-block w-100" alt="..." width="500" height="650">
+                    </div>
+                    <div class="carousel-caption">
+                      <h1 style="font-size: 90px; margin-bottom: 20%; margin-right: 50%; color:royalblue;" class="h1-responsive">Light mask</h1>
+                      <p>First text</p>
+                    </div>
+            </div> -->
+         
+          <a style="margin-left: 0%;" class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+            <span style="margin-left: 0%;" class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a style="margin-right: -4%;" class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+      </div>
+  </div>
+                  <!-- The next portion of ABOUT us -->
+  
+    <div class="container-fluid" id="about"> 
+        
+                     <!-- 1st row of the container  -->
+        <div class="row">
+          <div id="yellow_block" class="y_block"> </div>
+              <div class="col-md-6" style=" margin-bottom: 10%; margin-top: -4%;margin-left: 10%;margin-right: -10%;padding-left: 20px;">
+                <img id="yellowblock_image1" class=" rounded"  src="images/about us.jpg" alt="lounge" width="490" height="510" > 
+                  <h1  style=" text-align: center; color: antiquewhite;margin-top: 10%; margin-left: -30%;" > Let's Work Together </h1>
+                  <p  style="color: antiquewhite; margin-left: 0%;"> ------------------------------------------  </p>
+                  <p  style="color: antiquewhite; margin-left: 0%;"> -----------------------------------------</p>
+              </div>
+            
+              <div class="col-md-6" style="margin-top: 0%; margin-bottom: 10%;">
+                <h1 style="text-align: left; color: antiquewhite; margin-top: -5%;margin-bottom: 8%;margin-left: 8%; "> About Us </h1>
+                <img id="yellowblock_image2" class=" rounded" style="margin-bottom: 10%;margin-top: 0%; margin-left: 0px; " src="images/bangalor archit.jpg" alt="" width="460" height="330">
+                <p  style="color: antiquewhite; margin-left: 5%;"> ------------------------------------------  </p>
+                  <p  style="color: antiquewhite; margin-left: 5%;"> -----------------------------------------</p>
+              </div>
+        </div>
+    </div>   
+       
+        
+
+        <div id="contact">
+            <div>
+              <img style="margin-left: 30%; margin-top: 5%;" src="images/about.jpg" alt="" class="rounded-circle" width="300" height="300">
+            </div>
+            <div>
+                <img style="margin-left: 5%; margin-top: -15%;" src="images/about us.jpg" alt="" class="rounded-circle" width="400" height="400">
+                <img style="margin-left: -8%; margin-top: 10%;" src="images/architec.jpg" alt="" class="rounded-circle" width="600" height="600">
+                  
+                  <div id="circle" class="rounded-circle" style="margin-top: -5%; margin-left: 10%;" > </div>
+                  <div id="s1_circle" class="rounded-circle" style="margin-top:-8%; margin-left: 5%;"></div>
+                  <div id="s2_circle" class="rounded-circle" style="margin-left: 26%;margin-top: -20%;"></div>
+                  <div id="s3_circle" class="rounded-circle" style="margin-left: 70%; margin-top: -25%;"> </div>
+                  <div id="square1" style="margin-left: 66%; margin-top: -15%;"></div>
+                  <div id="square2" style="margin-left: 60%;margin-top: -21%;"></div>
+                  
+            </div>
+        </div>
+    
+       
+       
+     
+
+</body>
+</html>
