@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+
+    <style>
+        
+        .nav-link{
+                font-size: 18px;
+                
+        }
+        .nav-item{
+            padding-left: 30px;
+        }
+        .container{
+                    background-color:rgba(196, 133, 61, 0.37); padding-top: 3%; padding-bottom: 2%;
+                    margin-bottom: 5%; margin-top: 5%;
+        }
+        .overlay{
+            position: relative;
+        }
+                /* slide from LEFT TO RIGHT */
+        .overlay {          
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(56, 52, 15, 0.452);
+        overflow: hidden;
+        width: 0;
+        height: 100%;
+        transition: .7s ease;
+        }
+                    /* Slide from Bottom to TOP */
+        .overlay2{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(56, 52, 15, 0.452);
+        overflow: hidden;
+        width: 100%;
+        height: 0%;
+        transition: .5s ease;
+        }
+                 /* slide from RIGHT to LEFT  */
+        .overlay3{
+        position: absolute;
+        bottom: 0;
+        left: 100%;
+        right: 0%;
+        background-color: rgba(56, 52, 15, 0.452);
+        overflow: hidden;
+        width: 0%;
+        height: 100%;
+        transition: .7s ease;
+        }
+
+        .container1:hover .overlay{
+            
+            width: 100%;
+            height: 100%;
+        }
+        .container2:hover .overlay2{
+            
+            width: 100%;
+            height: 100%;
+        }
+        .container3:hover .overlay3{
+            
+            width: 100%;
+            left: 0;
+        }
+        .text {
+            color: rgb(212, 193, 193);
+            font-size: 70px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-60%, -50%);
+            white-space: nowrap;
+            }
+            .text a{
+                    text-decoration: none;
+                    color: white;
+                    
+            }
+            .text a:hover{
+                    color: rgb(209, 200, 200);
+            }
+            .container-xs{
+                position: relative;
+                 width: 100%;
+            }
+
+            .image{
+                display: block;
+                width: 100%;
+                height: auto;
+             }
+            .container-md:hover .centered{
+                    opacity: 1.0;
+                     transform:translate(-50%,-65%);
+                    transition:transform 0.5s ease-in;
+            }
+            .container-md::after:hover .centered{
+                    opacity: 0.0;
+                     transform:translate(-50%,-50%);
+                    transition:transform 0.3s ease-in;
+            }
+            /* .centered:hover {
+               
+            } */
+            
+            .nav-link:hover{
+                    opacity: 0.5;
+                    
+            }
+            
+            
+            
+         /* change navbar background on collapse */
+      @media (max-width: 720px) {
+          /* nav.navbar is for full navbar background change */
+            nav.navbar {                         
+              background: rgba(0, 0, 0, 0.315);
+              }
+            .fa-bars{
+                  color: white;
+                  font-size: 30px;
+            }
+            
+            /* #image1{
+                    
+            }
+             #image2{
+                
+            } */
+            /* #image3{
+                margin-top: 3%;margin-bottom: 10%;
+            }
+            #image4{
+                    padding-top: 10%;padding-bottom: 10%;
+            } */
+            /* #image5{
+                        
+            } */
+            /* #image6{
+                padding-top: 15%;
+            } */
+      }
+
+      .cool-link::after {
+          content: '';
+          display: block;
+          width: 0;
+          height: 2px;
+          background: rgb(255, 250, 250);
+          transition: width .3s;
+      }
+
+        .cool-link:hover::after {
+            width: 100%;
+           
+            /* transition: width .3s; */
+        }
+
+        .navbar-brand p{
+                    font-size: 45px; 
+        }
+        .fa-bars{
+                font-size: 40px; padding: 0 5px 15px 5px;
+                
+        }
+        .navbar-toggler,.custom-toggler{
+                outline: transparent;
+        }
+        
+    </style>
+    <script>
+        
+    </script>
+
+</head>
+<body>
+   
+    <nav  class="navbar navbar-expand-md navbar-dark bg-dark">  
+        <!-- Navbar-light turns the backgroud Transparent-->
+            <a style="color: rgb(172, 134, 99); "  class="navbar-brand " href="website.html"><p >ARCHITEC </p>  </a>
+
+            <button style="border: none;" class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span ><i class="fa fa-bars" aria-hidden="true"></i> </span>
+            </button>
+
+            <!-- This is the previous one -->
+
+        <div  class="collapse navbar-collapse" id= "collapsibleNavbar" >
+             <ul  class="navbar-nav">
+                <li class="nav-item">
+                    <a  style=" color: white; transition-duration: 0.3s; " class="nav-link cool-link" href="#about">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a style=" color: white; transition-duration: 0.3s;" class="nav-link cool-link" href="website.html">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a style=" color: white; transition-duration: 0.3s; " target="_self"  class="nav-link cool-link" href="project.html">PROJECT</a>
+                </li>    
+            </ul>
+        </div>
+    </nav>   
+
+                                         <!-- 1st Row -->
+        <div class="container">
+                <div class="row" >
+                                        <!-- 1st Column -->
+                    <div  id="image1" class="col-sm-4" style="margin-bottom: 3%;">
+                        <div class="container-xs container1" style="margin-bottom: 5%;">
+                            <img  src="images/front.jpg" alt="" width="100%" height="350"  >
+                            <div class="overlay">
+                                <div class="text">
+                                    <a href="project1.html"  ><h1 >Luxurus </h1><h2>Villa</h2></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-xs container2"  style="margin-bottom: 5%;" >
+                            <img  src="images/architec.jpg" alt="" width="100%" height="360" >
+                            <div class="overlay2">
+                                <div class="text"><a href=""> <h1>Sky</h1> <h2>Tower</h2></a> </div>
+                            </div>
+                        </div>
+
+                        <div class="container-xs container3" >
+                            <img  src="images/Gallery of Kradoan House.jpg" alt="" width="100%" height="520" >
+                            <div class="overlay3">
+                                <div class="text"><a href=""><h1>Exterior</h1><h3>View</h3></a> </div>
+                            </div>
+                        </div>
+                    </div>  
+                                   <!-- 2nd Column -->
+                    <div id="image2" class="col-sm-4 " style="margin-bottom: 2%;">
+                        <div class="container-xs container1" style="margin-bottom: 5%;">
+                            <img  src="images/headquartr.jpg" alt="" width="100%" height="570">
+                                <div class="overlay">
+                                    <div class="text"><a href=""><h1>Exhibition</h1><h3>center</h3> </a></div>
+                                </div>
+                         </div>
+                         <div class="container-xs container2" style="margin-bottom: 5%;">
+                            <img  src="images/black int2.jpg" alt="" width="100%" height="330">
+                                <div class="overlay2">
+                                    <div class="text"><a href=""><h1>Kitchen</h1><h3>interior</h3></a> </div>
+                                </div>
+                         </div>
+
+                         <div class="container-xs container3">
+                            <img  src="images/Jaw-Dropping.jpg" alt="" width="100%" height="330">
+                                <div class="overlay3">
+                                    <div class="text"><a href=""> <h1>Sitting</h1><h3>area</h3></a> </div>
+                                </div>
+                         </div>
+                    </div>
+
+                                  <!-- 3rd Column -->
+                    <div id="image3" class="col-sm-4" style="margin-bottom: 2%;">
+                        <div class="container-xs container1" style="margin-bottom: 5%;">
+                            <img  src="images/archi1.jpg" alt="" width="100%" height="330">
+                                <div class="overlay">
+                                    <div class="text"><a href=""><h1>Arabian</h1><h2>villa</h2></a> </div>
+                                 </div>
+                         </div>
+
+                         <div class="container-xs container2" style="margin-bottom: 5%;">
+                            <img  src="images/interior new.jpg" alt="" width="100%" height="570">
+                                <div class="overlay2">
+                                    <div class="text"><a href=""><h1>Conference</h1><h2>Room</h2></a></div>
+                                </div>
+                        </div>
+                        <div class="container-xs container3">
+                            <img  src="images/Parman house.jpg" alt="" width="100%" height="330">
+                            <div class="overlay3">
+                                <div class="text"><a href=""><h1>Lounge</h1><h3>interior</h3></a></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+        </div>
+                            
+       
+
+</body>
+</html>
